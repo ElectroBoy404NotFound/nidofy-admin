@@ -8,13 +8,30 @@ export function AuthProvider({ children }) {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const token = localStorage.getItem("authToken");
-        if(!token) {
-            setLoading(false);
-            return;
-        }
+        async function doCheck() {
+            const token = localStorage.getItem("authToken");
+            if(!token) {
+                setLoading(false);
+                return;
+            }
 
-        const userData = getUserData(token);
+            const userData = await getUserData(token);
+            if("error" in userData) {
+                localStorage.removeItem("token");
+                setUser(null);
+                setLoading(false);
+                return;
+            }
+
+            setUser(userData);
+            setLoading(false);
+        }
+        doCheck();
+    });
+
+    const authLoginFunc = async (token) => {
+        localStorage.setItem("authToken", token);
+        const userData = await getUserData(token);
         if("error" in userData) {
             localStorage.removeItem("token");
             setUser(null);
@@ -22,15 +39,9 @@ export function AuthProvider({ children }) {
         }
 
         setUser(userData);
-        setLoading(false);
-    });
-
-    const login = (token, userData) => {
-        localStorage.setItem("token", token);
-        setUser(null);
     };
 
-    const logout = () => {
+    const authLogoutFunc = () => {
         localStorage.removeItem("token");
         setUser(null);
     };
@@ -40,8 +51,8 @@ export function AuthProvider({ children }) {
             user,
             loading,
             isAuthenticated: !!user,
-            login,
-            logout
+            authLoginFunc,
+            authLogoutFunc
         }}>
             { children }
         </AuthContext.Provider>
