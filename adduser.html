@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Add User - Nidofy Admin Panel</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nb-impl></nb-impl>
+        <div id="layoutSidenav">
+            <sb-impl></sb-impl>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Add User</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="userslist.html">Manage Users</a></li>
+                            <li class="breadcrumb-item active">Add User</li>
+                        </ol>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <form onsubmit="onAddUserSubmit(event)" id="adduserform">
+                                    <div class="mb-3">
+                                        <label for="fullname" class="form-label">Full Name</label>
+                                        <input type="text" class="form-control" id="fullname" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="username" class="form-label">Username</label>
+                                        <input type="text" class="form-control" id="username" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="password" required>
+                                    </div>
+                                    <button type="submit" id="uploadbtn" class="btn btn-primary">Add User</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer-impl></footer-impl>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/api.js"></script>
+        <script src="js/components.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/adduser.js"></script>
+    </body>
+</html>

@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Dashboard - Nidofy Admin Panel</title>
+        <title>User List - Nidofy Admin Panel</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -16,39 +16,17 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Dashboard</h1>
+                        <h1 class="mt-4">Modify Users</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Welcome <span id="username"></span></li>
+                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Modify Users</li>
                         </ol>
-
-                        <div class="row">
-                            <div class="col">
-                                <div class="p-2 bg-light rounded">
-                                    <h5 class="mb-0" id="welcomepoems">0</h5>
-                                    <small class="text-muted">Total Poems</small>
-                                </div>
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <table id="userstable">
+                                </table>
                             </div>
                         </div>
-                        <br>
-
-                        <div class="row">
-                            <div class="col">
-                                <div class="p-2 bg-light rounded">
-                                    <h5 class="mb-0" id="welcomeusers">0</h5>
-                                    <small class="text-muted">Total Users</small>
-                                </div>
-                            </div>
-                        </div>
-                        <br>
-
-                        <!-- <div class="row">
-                            <div class="col">
-                                <div class="p-2 bg-light rounded">
-                                    <h5 class="mb-0" id="welcomeprojects">0</h5>
-                                    <small class="text-muted">Total Projects</small>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </main>
                 <footer-impl></footer-impl>
@@ -59,5 +37,6 @@
         <script src="js/api.js"></script>
         <script src="js/components.js"></script>
         <script src="js/common.js"></script>
+        <script src="js/userslist.js"></script>
     </body>
 </html>

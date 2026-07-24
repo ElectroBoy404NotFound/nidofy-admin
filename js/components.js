@@ -6,9 +6,28 @@ class SidebarImpl extends HTMLElement {
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
+                            <a class="nav-link" href="https://nikunjdoke.in/">
+                                <div class="sb-nav-link-icon"><i class="fas fa-house"></i></div>
+                                Back to Site
+                            </a>
                             <a class="nav-link" href="index.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
+                            </a>
+                            <a class="nav-link" href="userslist.html">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-user-tie"></i></div>
+                                Manage Users
+                            </a>
+                            
+                            <div class="sb-sidenav-menu-heading">Upload</div>
+                            <a class="nav-link" href="uploadpoem.html">
+                                <div class="sb-nav-link-icon"><i class="fa-regular fa-note-sticky"></i></div>
+                                Upload Poem
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Edit</div>
+                            <a class="nav-link" href="poemslist.html">
+                                <div class="sb-nav-link-icon"><i class="fa-regular fa-note-sticky"></i></div>
+                                Modify Poems
                             </a>
                         </div>
                     </div>

@@ -36,19 +36,20 @@ window.addEventListener('DOMContentLoaded', async (event) => {
 
     if(document.getElementById("welcomepoems")) {
         const dataResponse = await getHomeData();
+        const usersCount = await getListOfUsers();
 
         document.getElementById("username").innerText = newData.username;
         document.getElementById("welcomepoems").innerText = dataResponse.numberOfPoems;
-        document.getElementById("welcomeprojects").innerText = dataResponse.numberOfProject;
+        document.getElementById("welcomeusers").innerText = usersCount.length;
+        // document.getElementById("welcomeprojects").innerText = dataResponse.numberOfProject;
     }
 
     // Toggle the side navigation
     const sidebarToggle = document.body.querySelector('#sidebarToggle');
     if (sidebarToggle) {
-        // Uncomment Below to persist sidebar toggle between refreshes
-        // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
-        //     document.body.classList.toggle('sb-sidenav-toggled');
-        // }
+        if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
+            document.body.classList.toggle('sb-sidenav-toggled');
+        }
         sidebarToggle.addEventListener('click', event => {
             event.preventDefault();
             document.body.classList.toggle('sb-sidenav-toggled');
