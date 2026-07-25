@@ -1,5 +1,5 @@
 
-async function logoutClick() {
+async function navbarLogoutClicked() {
     await logoutUser();
     localStorage.removeItem("token");
     localStorage.removeItem("rtoken");
