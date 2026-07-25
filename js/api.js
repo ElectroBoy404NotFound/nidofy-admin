@@ -1,5 +1,5 @@
 const isLocalhost = location.port == 5500; // FIXME Only works for VS Code's dev server
-const API_BASE_URL = isLocalhost ? "https://nido.dino.icu/api/" : "/api";
+const API_BASE_URL = isLocalhost ? "https://nido.dino.icu/api/" : "/api/";
 // const API_BASE_URL = "http://localhost:8081/";
 
 async function sendPOSTRequest(url, body, authtoken) {
