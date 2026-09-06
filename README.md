@@ -28,17 +28,8 @@ https://github.com/ElectroBoy404NotFound/nidofy/tree/main/nidofy-backend
 
 ## Deploying
 
-Once the repo is cloned, run:
-
-`npm i`
-
-Then build the project:
-
-`npm run build`
-
-Finally, start it with:
-
-`npm start`
+Clone the repo and copy it to the root of a webserver.
+Change the backend URL in `js/common.js`
 
 ## Contributing
 
